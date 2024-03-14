@@ -1,5 +1,5 @@
 {
-  "name": "Gatsby Tut",
+  "name": "Cerberus Risk Management",
   "private": true,
   "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
@@ -13,6 +13,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "framer-motion": "^11.0.12",
     "gatsby": "^5.13.3",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-image": "^3.13.1",

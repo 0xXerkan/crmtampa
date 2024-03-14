@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
+import UpperNavbar from './UpperNavbar'
 import Footer from './Footer'
 import { Script } from 'gatsby'
 import '../styles/globals.css'
@@ -8,6 +9,7 @@ import '../styles/custom.css'
 const Layout = ({ children }) => {
   return (
     <div className='layout'>
+      <UpperNavbar />
       <Navbar />
       <div className="content">
         { children }

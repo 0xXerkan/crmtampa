@@ -12,7 +12,7 @@ const Team = () => {
                 <img src="/ryan.png" alt="team-member" className="rounded-circle mb-3" width='128px' height='auto' />
                 <h3 className="card-title">Ryan Stryker</h3>
                 <h4>Co-Founder</h4>
-                <a href="https://www.linkedin.com/in/0xstryker" target='_blank'>
+                <a href="https://www.linkedin.com/in/0xstryker" target='_blank' rel="noreferrer">
                   <i className="bi bi-linkedin" style={{fontSize: '2rem'}}></i>
                 </a>
               </div>
@@ -25,7 +25,7 @@ const Team = () => {
                 <img src="/mike.png" alt="team-member" className="rounded-circle mb-3" width='128px' height='auto' />
                 <h3 className="card-title">Michael Gerovitz</h3>
                 <h4>Co-Founder</h4>
-                <a href="https://www.linkedin.com/in/mike-gerovitz-179b1b196" target='_blank'>
+                <a href="https://www.linkedin.com/in/mike-gerovitz-179b1b196" target='_blank' rel="noreferrer">
                   <i className="bi bi-linkedin" style={{fontSize: '2rem'}}></i>
                 </a>
               </div>

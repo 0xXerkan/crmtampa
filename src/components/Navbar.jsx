@@ -26,19 +26,18 @@ const Navbar = () => {
               <a href="#services" className="nav-link">Services</a>
             </li>
             <li className="nav-item">
+              <a href="/" className="nav-link">Request a Quote</a>
+            </li>
+            <li className="nav-item">
               <a href="#contact" className="nav-link">Contact Us</a>
             </li>
             <li className="nav-item">
-              <a href="#contact" className="nav-link">
-                <button className='btn btn-primary' type='button'>
-                  (401) 588-2449
-                </button>
-              </a>
+              <a href="/" className="nav-link">Careers</a>
             </li>
-            <li>
-              <div className='nav-item'>
-                <img src="/vet.png" alt="vetOwned" height='40' width='auto' />
-              </div>
+            <li className="nav-item">
+              <a href="tel:(401) 588-2449" className="nav-link">
+                <button className='btn btn-primary' type='button'>(401) 588-2449</button>
+              </a>
             </li>
           </ul>
         </div>
