@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 const Navbar = () => {
+
   return (
     <nav className="navbar navbar-expand-lg bg-black navbar-dark sticky-top py-2 border-bottom border-primary border-3">
       <div className="container">
@@ -23,13 +24,13 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navigation">
           <ul className="navbar-nav ms-auto d-lg-flex align-items-lg-center">
             <li className="nav-item">
-              <a href="#services" className="nav-link">Services</a>
+              <a href="/#services" className="nav-link">Services</a>
             </li>
             <li className="nav-item">
-              <a href="/" className="nav-link">Request a Quote</a>
+              <Link to='/request-a-quote' className="nav-link">Request a Quote</Link>
             </li>
             <li className="nav-item">
-              <a href="#contact" className="nav-link">Contact Us</a>
+              <a href="/#contact" className="nav-link">Contact Us</a>
             </li>
             <li className="nav-item">
               <a href="/" className="nav-link">Careers</a>
