@@ -8,7 +8,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: "/crmtampa",
+  pathPrefix: `crmtampa`,
   plugins: [
     `gatsby-transformer-remark`,
     `gatsby-plugin-image`,
