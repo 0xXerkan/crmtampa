@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import { withAssetPrefix } from 'gatsby'
 
 const Page = () => {
   return (
@@ -11,7 +12,7 @@ const Page = () => {
           </div>
           <div className='d-flex justify-content-center mb-3'>
             <img
-            src="/eventSecurity.png"
+            src={withAssetPrefix("/eventSecurity.png")}
             alt="event-security"
               className="img-fluid w-50 rounded-2"
             />

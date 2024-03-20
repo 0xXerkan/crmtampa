@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'gatsby';
 import RequestAQuote from './RequestAQuote';
 import { AnimatePresence } from 'framer-motion';
+import { withAssetPrefix } from 'gatsby';
 
 const Navbar = () => {
 
@@ -22,7 +23,7 @@ const Navbar = () => {
             <div className='d-flex align-items-center navbar-brand m-0'>
               <div className="navbar-brand border-end border-light border-2 pe-2 m-0 __nav-small CRM">CRM</div>
               <div className='navbar-brand m-0 mx-1 __nav-small'>
-                <img src="/logo.png" alt="logo" height='46' width='auto' />
+                <img src={withAssetPrefix("/logo.png")} alt="logo" height='46' width='auto' />
               </div>
               <div className="navbar-brand m-0 __nav-small">Cerberus Risk Management</div>
             </div>
@@ -45,7 +46,7 @@ const Navbar = () => {
                 <Link to="/#contact" className="nav-link">Contact Us</Link>
               </li>
               <li className="nav-item">
-                <Link href="/" className="nav-link">Careers</Link>
+                <Link to="/" className="nav-link">Careers</Link>
               </li>
               <li className="nav-item">
                 <Link to="tel:(401) 588-2449" className="nav-link">

@@ -1,4 +1,5 @@
 import React from 'react'
+import { withAssetPrefix } from 'gatsby'
 
 const UpperNavbar = () => {
   return (
@@ -9,7 +10,7 @@ const UpperNavbar = () => {
         </div>
         <div className="text-light">
         {/* <button className='btn btn-primary' type='button'>(401) 588-2449</button> */}
-        <img className='ms-2' src="/vet.png" alt="vetOwned" height='40' width='auto' />
+        <img className='ms-2' src={withAssetPrefix("/vet.png")} alt="vetOwned" height='40' width='auto' />
         </div>
       </div>
     </div>

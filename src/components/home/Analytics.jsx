@@ -1,4 +1,5 @@
 import React from 'react';
+import { withAssetPrefix } from 'gatsby';
 
 const Analytics = () => {
   return (
@@ -15,10 +16,10 @@ const Analytics = () => {
         </p>
         <div className='row g-5'>
           <div className="col-md-6 ">
-            <img src="/synapse_600.jpg" alt="synapse" className='img-fluid' />
+            <img src={withAssetPrefix("/synapse_600.jpg")} alt="synapse" className='img-fluid' />
           </div>
           <div className="col-md-6 ">
-            <img src="/synapse2_600.jpg" alt="synapse2" className='img-fluid' />
+            <img src={withAssetPrefix("/synapse2_600.jpg")} alt="synapse2" className='img-fluid' />
           </div>
         </div>
 

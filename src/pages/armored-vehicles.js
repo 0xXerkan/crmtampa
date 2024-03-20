@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import { withAssetPrefix } from 'gatsby'
 
 const Page = () => {
   return (
@@ -10,7 +11,7 @@ const Page = () => {
             <h1 className="text-center mb-3 text-primary">Armored Vehicles</h1>
           </div>
           <div className='d-flex justify-content-center mb-3'>
-            <img src="/ac2_2.webp" alt="armored-vehicles" className="img-fluid w-50 rounded-2" />
+            <img src={withAssetPrefix("/ac2_2.webp")} alt="armored-vehicles" className="img-fluid w-50 rounded-2" />
           </div>
           <p className="lead text-center mb-4">
             Introducing our latest innovation in vehicle security: Level B6 Up Armored Vehicles<br/>
@@ -26,13 +27,13 @@ const Page = () => {
           </p>
           <div className="row text-center justify-content-center d-flex">
             <div className="col">
-              <img src="/ac1_600.jpeg" alt="armored-vehicles" className="img-fluid rounded-2" />
+              <img src={withAssetPrefix("/ac1_600.jpeg")} alt="armored-vehicles" className="img-fluid rounded-2" />
             </div>
             <div className="col">
-              <img src="/ac4_600.jpeg" alt="armored-vehicles" className="img-fluid rounded-2" />
+              <img src={withAssetPrefix("/ac4_600.jpeg")} alt="armored-vehicles" className="img-fluid rounded-2" />
             </div>
             <div className="col">
-              <img src="/ac5_600.jpeg" alt="armored-vehicles" className="img-fluid rounded-2" />
+              <img src={withAssetPrefix("/ac5_600.jpeg")} alt="armored-vehicles" className="img-fluid rounded-2" />
             </div>
           </div>
         </div>

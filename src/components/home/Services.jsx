@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { withAssetPrefix } from 'gatsby';
 
 
 const ServiceCard = ({ title, imgUrl, desc, linkTo }) => {
@@ -9,7 +10,7 @@ const ServiceCard = ({ title, imgUrl, desc, linkTo }) => {
           <div className="card-body">
             <h3 className="card-title mb-3">{title}</h3>
             <div className="card-img mb-3">
-              <img src={imgUrl} alt="security-guard"
+              <img src={withAssetPrefix(imgUrl)} alt="security-guard"
                 className="img-fluid __service-card-img rounded-2" />
             </div>
             <p className="card-text">{desc}</p>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { withAssetPrefix } from 'gatsby'
 
 const Team = () => {
   return (
@@ -9,7 +10,7 @@ const Team = () => {
           <div className="col-md-6">
             <div className="card bg-light">
               <div className="card-body">
-                <img src="/ryan.png" alt="team-member" className="rounded-circle mb-3" width='128px' height='auto' />
+                <img src={withAssetPrefix("/ryan.png")} alt="team-member" className="rounded-circle mb-3" width='128px' height='auto' />
                 <h3 className="card-title">Ryan Stryker</h3>
                 <h4>Co-Founder</h4>
                 <a href="https://www.linkedin.com/in/0xstryker" target='_blank' rel="noreferrer">
@@ -22,7 +23,7 @@ const Team = () => {
           <div className="col-md-6">
             <div className="card bg-light">
               <div className="card-body">
-                <img src="/mike.png" alt="team-member" className="rounded-circle mb-3" width='128px' height='auto' />
+                <img src={withAssetPrefix("/mike.png")} alt="team-member" className="rounded-circle mb-3" width='128px' height='auto' />
                 <h3 className="card-title">Michael Gerovitz</h3>
                 <h4>Co-Founder</h4>
                 <a href="https://www.linkedin.com/in/mike-gerovitz-179b1b196" target='_blank' rel="noreferrer">

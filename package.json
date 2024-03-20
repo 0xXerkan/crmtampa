@@ -3,6 +3,7 @@
   "private": true,
   "description": "Secure your Operations, Safeguard your Future",
   "version": "0.1.0",
+  "homepage": "https://0xXerkan.github.io/crmtampa",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",

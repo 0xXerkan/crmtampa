@@ -1,4 +1,5 @@
 import React from 'react';
+import { withAssetPrefix } from 'gatsby';
 // import { motion } from 'framer-motion';
 
 const Hero = () => {
@@ -26,13 +27,13 @@ const Hero = () => {
               </div>
               {/* <!-- Right --> */}
               <div className="d-flex w-50 justify-content-center">
-                <img src='/logo.png' alt="security"  width={0} height={0} className='rounded-5 w-50' style={{ width: '100%', height: 'auto' }} />
+                <img src={withAssetPrefix('/logo.png')} alt="security"  width={0} height={0} className='rounded-5 w-50' style={{ width: '100%', height: 'auto' }} />
               </div>
             </div>
           </div>
 
           <div className="hero-bg">
-            <img src='/TampaMJ3.png' alt="" width={0} height={0} style={{ width: '100%', height: 'auto' }} />
+            <img src={withAssetPrefix('/TampaMJ3.png')} alt="" width={0} height={0} style={{ width: '100%', height: 'auto' }} />
           </div>
         </div>
       </section>
@@ -59,7 +60,7 @@ const Hero = () => {
             </div>
 
             <div className="hero-bg">
-            <img src='/TampaMJ3.png' alt="" width={0} height={0} style={{ width: '100%', height: 'auto' }} />
+            <img src={withAssetPrefix('/TampaMJ3.png')} alt="" width={0} height={0} style={{ width: '100%', height: 'auto' }} />
             </div>
           </div>
         </section>
