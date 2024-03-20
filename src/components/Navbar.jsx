@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'gatsby';
 import RequestAQuote from './RequestAQuote';
+import { AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
 
@@ -10,13 +11,16 @@ const Navbar = () => {
     setModalOpen(!modalOpen);
   }
 
+  useEffect(() => {
+    document.body.style.overflow = modalOpen ? "hidden" : "unset";
+  }, [modalOpen]);
+
   return (
-    <div>
       <nav className="navbar navbar-expand-lg bg-black navbar-dark sticky-top py-2 border-bottom border-primary border-3">
         <div className="container">
           <Link to="/" className='navbar-brand m-0 p-0'>
             <div className='d-flex align-items-center navbar-brand m-0'>
-              <div className="navbar-brand border-end border-light border-2 pe-2 m-0 __nav-small">CRM</div>
+              <div className="navbar-brand border-end border-light border-2 pe-2 m-0 __nav-small CRM">CRM</div>
               <div className='navbar-brand m-0 mx-1 __nav-small'>
                 <img src="/logo.png" alt="logo" height='46' width='auto' />
               </div>
@@ -32,28 +36,29 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navigation">
             <ul className="navbar-nav ms-auto d-lg-flex align-items-lg-center">
               <li className="nav-item">
-                <a href="/#services" className="nav-link">Services</a>
+                <Link to="/#services" className="nav-link">Services</Link>
               </li>
               <li className="nav-item">
-                <div className="nav-link" onClick={toggleModal}>Request a Quote</div>
+                <div aria-hidden="true" className="nav-link" onClick={toggleModal}>Request a Quote</div>
               </li>
               <li className="nav-item">
-                <a href="/#contact" className="nav-link">Contact Us</a>
+                <Link to="/#contact" className="nav-link">Contact Us</Link>
               </li>
               <li className="nav-item">
-                <a href="/" className="nav-link">Careers</a>
+                <Link href="/" className="nav-link">Careers</Link>
               </li>
               <li className="nav-item">
-                <a href="tel:(401) 588-2449" className="nav-link">
+                <Link to="tel:(401) 588-2449" className="nav-link">
                   <button className='btn btn-primary' type='button'>(401) 588-2449</button>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
         </div>
+        <AnimatePresence>
+          { modalOpen && <RequestAQuote toggleModal={toggleModal} />}
+        </AnimatePresence>
       </nav>
-      { modalOpen && <RequestAQuote toggleModal={toggleModal} />}
-    </div>
   )
 }
 

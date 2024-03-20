@@ -42,6 +42,7 @@ body {
 
 .nav-link {
   color: white;
+  cursor: pointer;
 }
 
 .nav-link:hover {
@@ -95,9 +96,45 @@ body {
   margin-bottom: 1rem;
 }
 
+.modal-wrapper {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1030;
+  overflow-y: auto;
+  padding-bottom: 6rem;
+  transition: opacity 0.3s ease;
+}
+
+.modal-container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 5vh;
+}
+
+.close-button-wrapper {
+  display: flex;
+  justify-content: end;
+}
+
+.close-button {
+  cursor: pointer;
+  transform: rotate(45deg);
+  color: white;
+  font-weight: 700;
+  font-size: 2rem;
+}
 
 @media (max-width: 500px) {
   .hero-h1{font-size: 40px}
   .hero-h6{font-size: 14px}
   .hero-p{font-size: 14px;}
-  }
+}
+@media (max-width: 400px) {
+  .CRM { display: none }
+}
