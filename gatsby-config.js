@@ -8,7 +8,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: `crmtampa`,
+  pathPrefix: `/crmtampa`,
   plugins: [
     `gatsby-transformer-remark`,
     `gatsby-plugin-image`,
@@ -37,6 +37,7 @@ module.exports = {
     title: 'Cerberus Risk Management',
     description: 'Secure your Operations, Safeguard your Future',
     copyright: 'This website is copyright Cerberus Risk Management',
-    contact: 'info@crmtampa.com'
+    contact: 'info@crmtampa.com',
+    siteUrl: `https://0xxerkan.github.io/crmtampa`,
   }
 }
