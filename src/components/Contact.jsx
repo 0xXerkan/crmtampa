@@ -1,3 +1,4 @@
+import { Link } from 'gatsby'
 import React from 'react'
 
 const Contact = () => {
@@ -10,8 +11,8 @@ const Contact = () => {
             <div className='border-start border-light border-5 ps-3'>
               <div className='lead'><span className="fw-bold text-light">Mailing Address:</span> 7901 4th St N, Suite 300, St.
                 Petersburg, FL</div>
-              <div className='lead'><span className="fw-bold text-light">Phone:</span> (401) 588-2449</div>
-              <div className='lead'><span className="fw-bold text-light">Email:</span> info@crmtampa.com</div>
+              <div className='lead'><span className="fw-bold text-light">Phone:</span> <Link to="tel:(656) 224-3903" className='text-decoration-none'>(656) 224-3903</Link></div>
+              <div className='lead'><span className="fw-bold text-light">Email:</span> <Link to="mailto:info@crmtampa.com" className='text-decoration-none'>info@crmtampa.com</Link></div>
             </div>
           </div>
 
