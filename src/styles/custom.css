@@ -87,14 +87,8 @@ body {
   display: flex;
   justify-content: center;
 }
-.quote-form-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
 
-.quote-form > div {
-  margin-bottom: 1rem;
-}
+/*** Modal ***/
 
 .modal-wrapper {
   background-color: rgba(0, 0, 0, 0.8);
@@ -137,4 +131,26 @@ body {
 }
 @media (max-width: 400px) {
   .CRM { display: none }
+}
+
+/*** Forms ***/
+.quote-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quote-form > div {
+  margin-bottom: 1rem;
+}
+
+.application-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.application-form {
+  input, select {
+    margin-bottom: 1rem;
+    background-color: #f5f8fa
+  }
 }

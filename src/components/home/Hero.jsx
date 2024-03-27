@@ -27,7 +27,7 @@ const Hero = () => {
               </div>
               {/* <!-- Right --> */}
               <div className="d-flex w-50 justify-content-center">
-                <img src={withAssetPrefix('/logo.png')} alt="security"  width={0} height={0} className='rounded-5 w-50' style={{ width: '100%', height: 'auto' }} />
+                <img src={withAssetPrefix('/logo.png')} alt="logo"  width={0} height={0} className='rounded-5 w-50' style={{ width: '100%', height: 'auto' }} />
               </div>
             </div>
           </div>
