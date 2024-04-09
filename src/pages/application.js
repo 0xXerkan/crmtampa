@@ -155,7 +155,7 @@ const Page = () => {
             <div className="d-flex align-items-center">
               <p>D-</p>
             </div>
-            <input type="text" pattern="[0-9]{9}" title='Please enter a valid license number. Enter only the numbers after the "D-" in this field.' id="class_d_license" name="class_d_license" required className="form-control" />
+            <input type="text" pattern="[0-9]{7}" title='Please enter a valid license number. Enter only the numbers after the "D-" in this field.' id="class_d_license" name="class_d_license" required className="form-control" />
           </div>
 
           <label htmlFor="class_g_license">Security Class-G License Number (if applicable)</label>
@@ -163,7 +163,7 @@ const Page = () => {
             <div className="d-flex align-items-center">
               <p>G-</p>
             </div>
-            <input type="text" pattern="[0-9]{9}" title='Please enter a valid license number. Enter only the numbers after the "G-" in this field.' id="class_g_license" name="class_g_license" className="form-control" />
+            <input type="text" pattern="[0-9]{7}" title='Please enter a valid license number. Enter only the numbers after the "G-" in this field.' id="class_g_license" name="class_g_license" className="form-control" />
           </div>
 
           <label htmlFor="military_experience">Years of Military Experience</label>
@@ -203,7 +203,7 @@ const Page = () => {
     return (
       <div>
         <p className="lead text-center mb-4">
-          Your application has been submitted! Our team will review your application and will notify you on any further action. Thank you for your interested in joining the Cerberus Risk Management Team
+        Thank you! Your application has been submitted. Our team will review your application and will notify you on any further action. Thank you for your interest in joining the Cerberus Risk Management Team.
         </p>
         <div className='d-flex justify-content-end'>
         <Link to='/' className='mt-auto'>Back to Home<i className="bi bi-chevron-right"></i></Link>

@@ -41,6 +41,10 @@ body {
   text-shadow: 2px 2px 2px black;
 }
 
+.career-img {
+  width: 40%;
+}
+
 .nav-link {
   color: white;
   cursor: pointer;

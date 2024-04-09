@@ -30,7 +30,7 @@ const Page = () => {
             <img
             src={withAssetPrefix("/careers.png")}
             alt="event-security"
-              className="img-fluid w-50 rounded-2"
+              className="img-fluid rounded-2 career-img"
             />
           </div>
           <p className="lead text-center mb-4">
