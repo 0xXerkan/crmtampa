@@ -17,7 +17,7 @@ const Page = () => {
               className="img-fluid w-50 rounded-2"
             />
           </div>
-          <p className="lead text-center mb-4">
+          <p className="text-center mb-4">
             Our highly skilled teams are rigorously trained to execute a diverse range of security-related tasks, tailored to meet the unique needs of any event, irrespective of its size or complexity. Our unwavering commitment to excellence ensures that you can confidently relax and immerse yourself in the spectacle, knowing that our battle-hardened veterans, drawn from some of the most lethal combat teams on the planet, are tirelessly working behind the scenes to ensure your safety and security.
           </p>
         </div>

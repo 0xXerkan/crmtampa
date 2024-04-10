@@ -49,8 +49,8 @@ const Navbar = () => {
                 <Link to="/careers" className="nav-link">Careers</Link>
               </li>
               <li className="nav-item">
-                <Link to="tel:(656) 224-3903" className="nav-link">
-                  <button className='btn btn-primary' type='button'>(656) 224-3903</button>
+                <Link to="tel:(656) 224-3902" className="nav-link">
+                  <button className='btn btn-primary' type='button'>(656) 224-3902</button>
                 </Link>
               </li>
             </ul>

@@ -17,7 +17,7 @@ const GuardServices = () => {
               className="img-fluid w-50 rounded-2"
             />
           </div>
-          <p className="lead text-center mb-4">
+          <p className="text-center mb-4">
             Our security services can provide invaluable protection for
             businesses such as restaurants and bars. Trained security personnel
             can monitor the premises, identify potential security threats, and

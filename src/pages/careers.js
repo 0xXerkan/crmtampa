@@ -33,10 +33,10 @@ const Page = () => {
               className="img-fluid rounded-2 career-img"
             />
           </div>
-          <p className="lead text-center mb-4">
+          <p className="text-center mb-4">
             Cerberus Risk Management is actively seeking to expand our team by hiring qualified guards who possess a strong background in security, law enforcement (LEO), and military operations. We have a particular interest in individuals whose experience includes infantry, intelligence, counterintelligence, and signals. Our ideal candidates are those who have served within CENTCOM (U.S. Central Command), SOCOM (U.S. Special Operations Command), or JSOC (Joint Special Operations Command), reflecting our commitment to excellence and the complexity of the environments we operate in. At Cerberus, we value the unique skills, discipline, and perspectives that veterans from these specialized areas bring to our operations, aiming to enhance our capabilities in managing and mitigating risks in a dynamic global landscape. Join us in our mission to provide unparalleled security solutions by leveraging your expertise and experience in these critical fields.
           </p>
-          <p className='lead text-center mb-4'>
+          <p className='text-center mb-4'>
             Must Possess Florida D Security License to apply. Florida G license preferred and will fast track their progression into Executive Protection. Must be willing to undergo G License course for career progression. Must possess active license for application. Must be willing to fill out a W-9 and have an active bank account in order to receive payments.
           </p>
 

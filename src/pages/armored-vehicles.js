@@ -13,7 +13,7 @@ const Page = () => {
           <div className='d-flex justify-content-center mb-3'>
             <img src={withAssetPrefix("/ac2_2.webp")} alt="armored-vehicles" className="img-fluid w-50 rounded-2" />
           </div>
-          <p className="lead text-center mb-4">
+          <p className="text-center mb-4">
             Introducing our latest innovation in vehicle security: Level B6 Up Armored Vehicles<br/>
             Engineered to provide
             unparalleled protection without compromising performance, these formidable vehicles are designed to withstand

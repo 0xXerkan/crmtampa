@@ -5,7 +5,7 @@ const HeadComponents = [
   <link key="my-link-1" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />,
   // <link key="my-link-2" rel="preconnect" href="https://fonts.googleapis.com" />,
   // <link key="my-link-3" rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />,
-  <title key="head-component-4">Cerberus Risk Management</title>
+  <title key="head-component-4">Cerberus Risk Management</title>,
 ]
 
 

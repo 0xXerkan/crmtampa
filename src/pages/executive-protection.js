@@ -17,7 +17,7 @@ const Page = () => {
               className="img-fluid w-50 rounded-2"
             />
           </div>
-          <p className="lead text-center mb-4">
+          <p className="text-center mb-4">
             Our team of former special operations soldiers and private contractors
             can provide exceptional executive protection for high-value personnel
             due to their rigorous training and experience in high-stress
