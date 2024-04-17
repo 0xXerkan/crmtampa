@@ -2,6 +2,8 @@ import React from "react"
 import Layout from "../components/Layout"
 
 import { Hero, Services, Mission, Team,  } from "/src/components/home";
+import { Seo } from "../components/Seo";
+
 
 // import { Link, graphql } from "gatsby";
 // import Img from "gatsby-image";
@@ -18,6 +20,14 @@ export default function Home({data}) {
     </Layout>
   )
 }
+
+
+
+export const Head = () => (
+  <>
+  <Seo />
+  </>
+)
 
 // export const query = graphql`
 //   query Banner {

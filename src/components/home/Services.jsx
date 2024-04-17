@@ -29,8 +29,8 @@ const Services = () => {
             <h1 className="text-center mb-3 text-primary">Services</h1>
           </div>
           <p className="lead text-center mb-4">
-            We offer a number of services to meet your needs and are equiped to
-            accomodate both large scale and small operations
+            We offer a number of services to meet your needs and are equipped to
+            accommodate both large scale and small operations
           </p>
           
           <div className="row text-center justify-content-center g-4 d-flex">

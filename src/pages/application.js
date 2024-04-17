@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { withAssetPrefix, Link } from 'gatsby';
+import { Seo } from "../components/Seo";
 
 const Page = () => {
   //isLoading state for button
@@ -14,7 +15,11 @@ const Page = () => {
     event.preventDefault();
     const form = document.getElementById('application-form');
     const data = new FormData(form);
-    const action = event.target.action;
+    // const action = event.target.action;
+    //dev
+    const action = "https://script.google.com/macros/s/AKfycbxo9Q1KDF9_ibGPodn_gx-MIpJ02LSBf4LDt4Y17n8purMo56akNohkC0NkKAm9X7HP/exec";
+    //prod
+    // const action = "https://script.google.com/macros/s/AKfycbydtHEHJMfj31n4B4M_TUeT9wyYJO0Lg0IDeFvU_eOUWjFUcD2V1A9e_tsc2K4oms_E5A/exec";
     fetch(action, {
       method: 'POST',
       body: data,
@@ -31,12 +36,30 @@ const Page = () => {
   }
 
   const ApplicationForm = () => {
+
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [zip, setZip] = useState('');
+
+
+    const handleZipChange = (e) => {
+      const inputValue = e.target.value.replace(/\D/g, '').substring(0, 5); // Remove non-digit characters, Limit to 5 digits
+      setZip(inputValue);
+    }
+
+    const handlePhoneChange = (e) => {
+      const inputValue = e.target.value.replace(/\D/g, ''); // Remove non-digit characters
+      let x = inputValue.match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+      console.log(x[1], x[2], x[3]);
+      let formattedValue = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+      console.log(formattedValue);
+      console.log(formattedValue.length);
+      setPhoneNumber(formattedValue);
+    };
+    
     return (
       <div>
         <p>We've made the job application process quick and easy. Take a moment to fill out the application below, and let's get started on the journey together. Your skills and talents are exactly what we're looking for, and we can't wait to learn more about you!</p>
         <form
-          action="https://script.google.com/macros/s/AKfycbxo9Q1KDF9_ibGPodn_gx-MIpJ02LSBf4LDt4Y17n8purMo56akNohkC0NkKAm9X7HP/exec" 
-          method="POST" 
           className='application-form'
           id='application-form'
           onSubmit={handleSubmit}
@@ -122,10 +145,10 @@ const Page = () => {
           </select>
 
           <label htmlFor="zip">Zip Code</label>
-          <input type="text" pattern="[0-9]{5}" id="zip" name="zip" required className="form-control" />
+          <input type="text" pattern="[0-9]{5}" title="Please enter a 5-digit zip code" value={zip} onChange={handleZipChange} id="zip" name="zip" required className="form-control" />
 
           <label htmlFor="phone">Phone Number</label>
-          <input type="tel" maxLength='10' id="phone" name="phone" required className="form-control" />
+          <input type="text" minLength='14' maxLength='14' id="phone" value={phoneNumber} onChange={handlePhoneChange} placeholder="(###) ###-####" title="Please enter a valid 10-digit phone number" name="phone" required className="form-control" />
 
           <label htmlFor="gender">Gender</label>
           <select defaultValue="" id="gender" name="gender" required className="form-control">
@@ -134,14 +157,14 @@ const Page = () => {
               <option value="Female">Female</option>
           </select>
 
-          <label htmlFor="height">Height (in inches)</label>
+          {/* <label htmlFor="height">Height (in inches)</label>
           <input type="number" max="200" id="height" name="height" required className="form-control" />
 
           <label htmlFor="weight">Weight (in lbs)</label>
           <input type="number" max="1000" id="weight" name="weight" required className="form-control" />
 
           <label htmlFor="dob">Date of Birth</label>
-          <input type="date" id="dob" name="dob" required className="form-control" />
+          <input type="date" id="dob" name="dob" required className="form-control" /> */}
 
           <label htmlFor="criminal_history">Do you have a Criminal History?</label>
           <select defaultValue="" id="criminal_history" name="criminal_history" required className="form-control">
@@ -178,15 +201,14 @@ const Page = () => {
           <label htmlFor="paramedic_experience">Years of Paramedic Experience</label>
           <input type="number" max="100" id="paramedic_experience" name="paramedic_experience" required className="form-control" />
 
-          <label htmlFor="cpr_expiration">If CPR Certified, please enter CPR Certification Expiration Date</label>
-          <input type="date" id="cpr_expiration" name="cpr_expiration"  className="form-control" />
-
           <label htmlFor="bjj_training">Years of BJJ Training</label>
           <input type="number" max="100" id="bjj_training" name="bjj_training" required className="form-control" />
 
           <label htmlFor="boxing_training">Years of Boxing Training</label>
           <input type="number" max="100" id="boxing_training" name="boxing_training" required className="form-control" />
 
+          <label htmlFor="cpr_expiration">If CPR Certified, please enter CPR Certification Expiration Date</label>
+          <input type="date" id="cpr_expiration" name="cpr_expiration"  className="form-control" />
 
 
           <div className='d-flex justify-content-between'>
@@ -232,5 +254,11 @@ const Page = () => {
   )
 
 }
+
+export const Head = () => (
+  <>
+  <Seo title="Application" />
+  </>
+)
 
 export default Page

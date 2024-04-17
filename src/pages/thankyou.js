@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react';
 import Layout from "../components/Layout";
+import { Seo } from "../components/Seo";
 
 const Page = () => {
   
@@ -27,5 +28,11 @@ const Page = () => {
     </Layout>
   )
 }
+
+export const Head = () => (
+  <>
+  <Seo />
+  </>
+)
 
 export default Page

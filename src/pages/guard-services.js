@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
 import { withAssetPrefix } from "gatsby";
+import { Seo } from "../components/Seo";
 
 const GuardServices = () => {
   return (
@@ -34,5 +35,11 @@ const GuardServices = () => {
     </Layout>
   );
 }
+
+export const Head = () => (
+  <>
+  <Seo title="Guard Services" />
+  </>
+)
 
 export default GuardServices;

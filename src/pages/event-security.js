@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import { withAssetPrefix } from 'gatsby'
+import { Seo } from "../components/Seo";
 
 const Page = () => {
   return (
@@ -25,5 +26,11 @@ const Page = () => {
     </Layout>
   )
 }
+
+export const Head = () => (
+  <>
+  <Seo title="Event Security" />
+  </>
+)
 
 export default Page

@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import { Link, withAssetPrefix } from 'gatsby'
+import { Seo } from "../components/Seo";
 
 // const openPositions = [
 //   {
@@ -77,5 +78,11 @@ const Page = () => {
     </Layout>
   )
 }
+
+export const Head = () => (
+  <>
+  <Seo title="Careers" />
+  </>
+)
 
 export default Page
