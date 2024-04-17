@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkCerberus_Risk_Management=self.webpackChunkCerberus_Risk_Management||[]).push([[883],{429:function(e,n,t){t.r(n),t.d(n,{default:function(){return a}});var r=t(7294),u=t(2561);function a(){return r.createElement(u.Z,null,r.createElement("h2",null,"404"),r.createElement("p",null,"Sorry, that page doesn't exist (yet)!"))}}}]);
-//# sourceMappingURL=component---src-pages-404-js-ea1d9f83ba1759b6e956.js.map

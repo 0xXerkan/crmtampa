@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkCerberus_Risk_Management=self.webpackChunkCerberus_Risk_Management||[]).push([[887],{7399:function(e,n,a){a.r(n);var t=a(7294),u=a(1294),l=a(8378);n.default=()=>t.createElement(u.Z,null,t.createElement(l.Z,null))}}]);
-//# sourceMappingURL=component---src-pages-request-a-quote-js-ac07f2c9c834cacd6b08.js.map
