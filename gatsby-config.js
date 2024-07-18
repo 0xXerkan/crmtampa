@@ -9,7 +9,7 @@
  */
 module.exports = {
   // pathPrefix: "/crmtampa",
-  assetPrefix: "/crmtampa",
+  // assetPrefix: "/crmtampa",
   plugins: [
     `gatsby-transformer-remark`,
     `gatsby-plugin-image`,

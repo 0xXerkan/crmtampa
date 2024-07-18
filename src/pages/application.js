@@ -15,11 +15,16 @@ const Page = () => {
     event.preventDefault();
     const form = document.getElementById('application-form');
     const data = new FormData(form);
-    // const action = event.target.action;
+    const isOnCall = (data.get('position') === "On Call / Event");
+
     //dev
-    const action = "https://script.google.com/macros/s/AKfycbxo9Q1KDF9_ibGPodn_gx-MIpJ02LSBf4LDt4Y17n8purMo56akNohkC0NkKAm9X7HP/exec";
+    // const action = "https://script.google.com/macros/s/AKfycbxo9Q1KDF9_ibGPodn_gx-MIpJ02LSBf4LDt4Y17n8purMo56akNohkC0NkKAm9X7HP/exec";
     //prod
-    // const action = "https://script.google.com/macros/s/AKfycbydtHEHJMfj31n4B4M_TUeT9wyYJO0Lg0IDeFvU_eOUWjFUcD2V1A9e_tsc2K4oms_E5A/exec";
+    const onCallScriptUrl = "https://script.google.com/macros/s/AKfycbx2rFiV1QCyC7S6x0N8NCPynY_vtn3tDvh8hxTPnJ6ipNDRZzVnsWa-5kETGB1IqRlE/exec"
+    const applicationScriptUrl = "https://script.google.com/macros/s/AKfycbydtHEHJMfj31n4B4M_TUeT9wyYJO0Lg0IDeFvU_eOUWjFUcD2V1A9e_tsc2K4oms_E5A/exec";
+
+    const action = isOnCall ? onCallScriptUrl : applicationScriptUrl;
+    
     fetch(action, {
       method: 'POST',
       body: data,
@@ -39,6 +44,11 @@ const Page = () => {
 
     const [phoneNumber, setPhoneNumber] = useState('');
     const [zip, setZip] = useState('');
+    const [isOtherChecked, setIsOtherChecked] = useState(false);
+
+    const handleOtherChange = (event) => {
+      setIsOtherChecked(event.target.checked);
+    };
 
 
     const handleZipChange = (e) => {
@@ -51,8 +61,8 @@ const Page = () => {
       let x = inputValue.match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
       console.log(x[1], x[2], x[3]);
       let formattedValue = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
-      console.log(formattedValue);
-      console.log(formattedValue.length);
+      // console.log(formattedValue);
+      // console.log(formattedValue.length);
       setPhoneNumber(formattedValue);
     };
     
@@ -69,9 +79,12 @@ const Page = () => {
 
 
           <label htmlFor="position" className=''>Position Appying For</label>
-          <select defaultValue="Security Officer" id="position" name="position" required className="form-control">
-              <option disabled value="">Select</option>
+          <select defaultValue="" id="position" name="position" required className="form-control">
+              <option disabled value="">Please Select</option>
+              <option value="CCTV Security Agent">CCTV Security Agent</option>
+              <option value="Roving Armed Security Agent">Roving Armed Security Agent</option>
               <option value="Security Officer">Security Officer</option>
+              <option value="On Call / Event">On Call / Event</option>
           </select>
 
           <label htmlFor="first_name" className=''>First Name</label>
@@ -157,14 +170,72 @@ const Page = () => {
               <option value="Female">Female</option>
           </select>
 
-          {/* <label htmlFor="height">Height (in inches)</label>
-          <input type="number" max="200" id="height" name="height" required className="form-control" />
+          <div className='border p-2 mb-3'>
+            <p>What languagues are you fluent in? (Please select all that apply)</p>
+            <div className='form-check form-check-inline'>
+              <input className='form-check-input' type="checkbox" name="english" id='english' value="1" />
+              <label className='form-check-label' htmlFor="english">English</label>
+            </div>
+            <div className='form-check form-check-inline'>
+              <input className='form-check-input' type="checkbox" name="spanish" id='spanish' value="1" />
+              <label className='form-check-label' htmlFor="spanish">Spanish</label>
+            </div>
+            <div className='form-check form-check-inline'>
+              <input className='form-check-input' type="checkbox" id='otherlang' onChange={handleOtherChange} />
+              <label className='form-check-label' htmlFor='otherlang' >Other</label>
+            </div>
+            <div className='form-check-inline'>
+              <input className='form-control' type="text" name="lang_other" placeholder="If other, please specify" disabled={!isOtherChecked} />
+            </div>
+          </div>
 
-          <label htmlFor="weight">Weight (in lbs)</label>
-          <input type="number" max="1000" id="weight" name="weight" required className="form-control" />
+          <div className='border p-2 mb-3'>
+            <p>Shift Availability: (Please select all that apply)</p>
+            <div className='form-check form-check-inline'>
+              <input className='form-check-input' type="checkbox" name="morning" id='morning' value="1" />
+              <label className='form-check-label' htmlFor="morning">Morning</label>
+            </div>
+            <div className='form-check form-check-inline'>
+              <input className='form-check-input' type="checkbox" name="evening" id='evening' value="1" />
+              <label className='form-check-label' htmlFor="evening">Evening</label>
+            </div>
+            <div className='form-check form-check-inline'>
+              <input className='form-check-input' type="checkbox" name="overnight" id='overnight' value="1" />
+              <label className='form-check-label' htmlFor="overnight">Overnight</label>
+            </div>
+          </div>
 
-          <label htmlFor="dob">Date of Birth</label>
-          <input type="date" id="dob" name="dob" required className="form-control" /> */}
+          <div className='border p-2 mb-3'>
+            <p>Day Availability: (Please select all that apply)</p>
+            <div className='form-check form-check-inline'>
+              <input className='form-check-input' type="checkbox" name="mon" id='mon' value="1" />
+              <label className='form-check-label' htmlFor="mon">Mon</label>
+            </div>
+            <div className='form-check form-check-inline'>
+              <input className='form-check-input' type="checkbox" name="tue" id='tue' value="1" />
+              <label className='form-check-label' htmlFor="tue">Tue</label>
+            </div>
+            <div className='form-check form-check-inline'>
+              <input className='form-check-input' type="checkbox" name="wed" id='wed' value="1" />
+              <label className='form-check-label' htmlFor="wed">Wed</label>
+            </div>
+            <div className='form-check form-check-inline'>
+              <input className='form-check-input' type="checkbox" name="thur" id='thur' value="1" />
+              <label className='form-check-label' htmlFor="thur">Thur</label>
+            </div>
+            <div className='form-check form-check-inline'>
+              <input className='form-check-input' type="checkbox" name="fri" id='fri' value="1" />
+              <label className='form-check-label' htmlFor="fri">Fri</label>
+            </div>
+            <div className='form-check form-check-inline'>
+              <input className='form-check-input' type="checkbox" name="sat" id='sat' value="1" />
+              <label className='form-check-label' htmlFor="sat">Sat</label>
+            </div>
+            <div className='form-check form-check-inline'>
+              <input className='form-check-input' type="checkbox" name="sun" id='sun' value="1" />
+              <label className='form-check-label' htmlFor="sun">Sun</label>
+            </div>
+          </div>
 
           <label htmlFor="criminal_history">Do you have a Criminal History?</label>
           <select defaultValue="" id="criminal_history" name="criminal_history" required className="form-control">

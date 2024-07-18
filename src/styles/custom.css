@@ -154,8 +154,11 @@ body {
 }
 
 .application-form {
-  input, select {
+  input:not(.form-check-input), select {
     margin-bottom: 1rem;
     background-color: #f5f8fa
+  }
+  p {
+    margin-bottom: 0;
   }
 }
